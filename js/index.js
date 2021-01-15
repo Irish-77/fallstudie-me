@@ -1,7 +1,7 @@
 var emailEntered = true;
 var emailValid = false;
 
-localStorage.getItem("username", 'Querbert');
+localStorage.setItem("username", 'Querbert');
 
 $(document).ready(function() {
 
