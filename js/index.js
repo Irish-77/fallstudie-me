@@ -14,8 +14,10 @@ $(document).ready(function() {
     $("#toggle-btn").click(function() {
         if ($("#toggle-btn").hasClass("collapsed")) {
             $("#blur").removeClass("blur-content");
+            $(".navbar-top").addClass("navbar-top-shadow");
         } else {
             $("#blur").addClass("blur-content");
+            $(".navbar-top").removeClass("navbar-top-shadow");
         }
     });
 
@@ -28,6 +30,30 @@ $(document).ready(function() {
     });
 
 
+
+
+    const header = document.querySelector("header");
+    const sectionOne = document.querySelector(".changeNav");
+
+    const sectionOneOptions = {
+        rootMargin: "-200px 0px 0px 0px"
+    };
+
+    const sectionOneObserver = new IntersectionObserver(function(
+            entries,
+            sectionOneObserver
+        ) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    header.classList.add("nav-scrolled");
+                } else {
+                    header.classList.remove("nav-scrolled");
+                }
+            });
+        },
+        sectionOneOptions);
+
+    sectionOneObserver.observe(sectionOne);
 
     const faders = document.querySelectorAll(".fade-in");
     const sliders = document.querySelectorAll(".slide-in");
@@ -61,10 +87,5 @@ $(document).ready(function() {
     sliders.forEach(slider => {
         appearOnScroll.observe(slider);
     });
-
-
-
-
-
 
 });
