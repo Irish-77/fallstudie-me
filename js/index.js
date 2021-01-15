@@ -1,9 +1,7 @@
 var emailEntered = true;
 var emailValid = false;
 
-//import { authUser } from "./login_service.js";
-
-//import { authUser } from "./login_service.js";
+localStorage.getItem("username", 'Querbert');
 
 $(document).ready(function() {
 

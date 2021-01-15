@@ -1,22 +1,9 @@
-/*
- * Globals
- */
-
-
-/* Custom default button */
-
 .btn-secondary,
 .btn-secondary:hover,
 .btn-secondary:focus {
     color: #333;
     text-shadow: none;
-    /* Prevent inheritance from `body` */
 }
-
-
-/*
- * Base structure
- */
 
 body {
     text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
@@ -26,11 +13,6 @@ body {
 .cover-container {
     max-width: 42em;
 }
-
-
-/*
- * Header
- */
 
 .nav-masthead .nav-link {
     padding: .25rem 0;
@@ -103,4 +85,35 @@ body {
 
 .wrong {
     border-color: red;
+}
+
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:active,
+.form-control:focus,
+.form-control.focus,
+.form-control:active {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7067A2 !important;
+}
+
+.btn-outline-primary {
+    border-color: #7067A2;
+}
+
+.form-control {
+    border-color: #7067A2 !important;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7067A2 !important;
+    outline: 0 none;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    color: white;
+    background-color: #7067A2;
 }

@@ -38,7 +38,7 @@
 
 .step .circle {
     background-color: white;
-    border: 3px solid gray;
+    border: 3px solid white;
     border-radius: 100%;
     width: 20px;
     /* +6 for border */
@@ -57,17 +57,17 @@
 
 .step.completed .circle {
     visibility: visible;
-    background-color: rgb(6, 150, 215);
-    border-color: rgb(6, 150, 215);
+    background-color: #7067A2;
+    border-color: #7067A2;
 }
 
 .step.completed .line {
-    border-left: 3px solid rgb(6, 150, 215);
+    border-left: 3px solid #7067A2;
 }
 
 .step.active .circle {
     visibility: visible;
-    border-color: rgb(6, 150, 215);
+    border-color: #7067A2;
 }
 
 .step.empty .circle {
@@ -82,7 +82,7 @@
 }
 
 .step:last-child .line {
-    border-left: 3px solid white;
+    border-left: 3px solid gray;
     z-index: -1;
     /* behind the circle to completely hide */
 }
@@ -137,5 +137,32 @@ td {
     word-wrap: break-word !important;
 }
 
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:active {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7067A2 !important;
+}
 
-/* codepen override */
+.btn-outline-primary {
+    border-color: #7067A2;
+}
+
+.rounded-pill {
+    background-color: #7067A2 !important;
+    color: white !important;
+}
+
+.list-group-item {
+    color: black;
+    text-shadow: none !important;
+    padding-right: 3.5px;
+    padding-left: 3.5px;
+}
+
+.accordion-body {
+    padding-right: 0px;
+    padding-left: 0px;
+}

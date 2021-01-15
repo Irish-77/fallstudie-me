@@ -17,11 +17,12 @@ async function createCheckBox(containerId) {
     var container = document.getElementById(containerId);
     var spinner = createSpinner();
     container.appendChild(spinner);
-
+    var htmlElement = document.querySelector("html");
+    htmlElement.style = "cursor: progress;";
 
     await getEvaluationById(1).then((resp) => {
         evaluation = resp.data;
-        console.log(evaluation);
+        //console.log(evaluation);
     });
 
     await setTimeout(function() {
@@ -29,7 +30,7 @@ async function createCheckBox(containerId) {
         //Curser anpassen
 
         container.removeChild(spinner);
-
+        htmlElement.style = "cursor: auto;";
 
 
         var index = 0;
