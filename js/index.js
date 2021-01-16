@@ -1,13 +1,12 @@
 var emailEntered = true;
 var emailValid = false;
 
-localStorage.setItem("username", 'Querbert');
+
 
 
 $(document).ready(function() {
 
 
-    console.log(localStorage.getItem("username"));
 
 
     $("#toggle-btn").click(function() {

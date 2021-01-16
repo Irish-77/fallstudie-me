@@ -174,3 +174,18 @@ td {
 li {
     text-align: left !important;
 }
+
+.btn-primary {
+    margin-top: 50px !important;
+    border: none !important;
+    max-width: 80%;
+    margin: auto;
+}
+
+a:hover {
+    color: white !important;
+}
+
+a {
+    letter-spacing: 0;
+}
