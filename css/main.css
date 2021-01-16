@@ -68,11 +68,40 @@ html {
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
+
+/*
 .navbar-collapse .nav-btn-top:hover {
     color: white;
     font-size: 140%;
     border-color: white;
     border-radius: 0;
+}
+*/
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
 }
 
 .container-landing {
@@ -158,9 +187,12 @@ html {
     width: 80%;
 }
 
+
+/*
 .nav-item:hover {
     border: 1px solid white !important;
 }
+*/
 
 .example-celebs {
     border: 1px solid white;
@@ -262,4 +294,24 @@ html {
 input[type="text"]:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7067A2 !important;
     outline: 0 none;
+}
+
+#svg>* path {
+    fill: white;
+}
+
+#svg {
+    margin-top: 10vh !important;
+}
+
+svg {
+    margin: auto !important;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 100%;
+}
+
+.beschreibung-svg {
+    margin-top: 25px;
+    text-align: center;
 }
