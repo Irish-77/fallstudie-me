@@ -166,3 +166,11 @@ td {
     padding-right: 0px;
     padding-left: 0px;
 }
+
+.badge {
+    margin-left: 15px;
+}
+
+li {
+    text-align: left !important;
+}

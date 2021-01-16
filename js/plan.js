@@ -71,18 +71,30 @@ $(document).ready(function() {
             var dauer = umlaute(resp[i].duration);
             var beschreibung = umlaute(resp[i].description);
 
-            var step = `<div id="${current_id}" class="step"> <div id="beschriftung"> <h3>${day_short},<br>${day_nr}<br>${month_short}</h3> </div> <div class="v-stepper"> <div class="circle"></div> <div class="line"></div> </div> <div class="content" style="text-align: justify;"> <h3>${eigenschaft}</h3> <h5>${task}</h5> <p>🎯 ${beschreibung}</p> <p>⏰ ${dauer}</p> <div class="accordion accordion-flush" id="accordionFlushExample" style="color: white;"> <div class="accordion-item"> <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed shadow-none" style="width: 100% !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_${current_id}" aria-expanded="false" aria-controls="flush-collapseOne_${current_id}"> Detailansicht </button>                    </h2> <div id="flush-collapseOne_${current_id}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample"> <div class="accordion-body"> <ul class="list-group"> <li class="list-group-item d-flex justify-content-between align-items-center"> Cras justo odio <span class="badge bg-primary rounded-pill">14</span> </li> <li class="list-group-item d-flex justify-content-between align-items-center"> Dapibus ac facilisis in <span class="badge bg-primary rounded-pill">2</span> </li> <li class="list-group-item d-flex justify-content-between align-items-center"> Morbi leo risus <span class="badge bg-primary rounded-pill">1</span> </li> </ul> </div> </div> </div> </div> </div> </div>`;
+            var step = `<div id="${current_id}" class="step"> <div id="beschriftung"> <h3>${day_short},<br>${day_nr}<br>${month_short}</h3> </div> <div class="v-stepper"> <div class="circle"></div> <div class="line"></div> </div> <div class="content" style="text-align: justify;"> <h3>${eigenschaft}</h3> <h5>${task}</h5> <p>🎯 ${beschreibung}</p> <p>⏰ ${dauer}</p> <div id="accordion_${current_id}"> </div> </div> </div>`;
             $('#plan').append(step);
 
-            console.log(new Date(date.toDateString()));
-            console.log(today);
+
+
+
+
+            if (resp[i].exercises.length != 0) {
+                var tasks = `<div class="accordion accordion-flush" id="accordionFlushExample" style="color: white;"> <div class="accordion-item"> <h2 class="accordion-header" id="flush-headingOne"> <button class="accordion-button collapsed shadow-none" style="width: 100% !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_${current_id}" aria-expanded="false" aria-controls="flush-collapseOne_${current_id}"> Detailansicht </button>            </h2> <div id="flush-collapseOne_${current_id}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample"> <div class="accordion-body"> <ul id="list_${current_id}" class="list-group"> </ul> </div> </div> </div> </div>`;
+                $('#accordion_' + current_id).append(tasks);
+
+                for (a = 0; a < resp[i].exercises.length; a++) {
+                    var text = resp[i].exercises[a].text;
+                    var value = resp[i].exercises[a].value;
+                    var singleTask = `<li class="list-group-item d-flex justify-content-between align-items-center">${text}<span class="badge bg-primary rounded-pill">${value}x</span></li>`;
+                    $('#list_' + current_id).append(singleTask);
+                }
+            }
+            //Todo: Stage
 
             if (new Date(date.toDateString()).getTime() === today) {
                 $('#' + current_id).addClass('active');
-                console.log("0");
             } else if (new Date(date.toDateString()).getTime() < today) {
                 $('#' + current_id).addClass('completed');
-                console.log("1");
             }
         }
     });
