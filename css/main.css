@@ -114,8 +114,11 @@ a:after {
 
 .landing-content {
     position: relative;
-    padding-top: 22vh;
+    /*padding-top: 15vh;*/
     color: white;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    margin: auto !important;
 }
 
 .content-right {

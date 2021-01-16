@@ -71,6 +71,7 @@ $(document).ready(function() {
 
             if (check) {
                 $('#inputUsername').removeClass("wrong");
+                $('#inputUsername').css('border-color', 'red !important');
                 $('#inputPassword').removeClass("wrong");
                 $('#wrongCred').addClass("visually-hidden");
                 localStorage.setItem("username", username);
