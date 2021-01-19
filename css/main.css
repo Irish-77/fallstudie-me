@@ -86,7 +86,7 @@ a:hover:after {
 a {
     color: #fff;
     text-decoration: none;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     display: inline-block;
     padding: 15px 20px;
     position: relative;
@@ -189,13 +189,6 @@ a:after {
     padding-right: 10%;
     width: 80%;
 }
-
-
-/*
-.nav-item:hover {
-    border: 1px solid white !important;
-}
-*/
 
 .example-celebs {
     border: 1px solid white;

@@ -99,12 +99,8 @@ body {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #7067A2 !important;
 }
 
-.btn-outline-primary {
-    border-color: #7067A2;
-}
-
 .form-control {
-    border-color: none !important;
+    border: none !important;
 }
 
 input[type="text"]:focus {
@@ -118,5 +114,5 @@ input[type="text"]:focus {
 .btn-primary:active:focus {
     color: white;
     background-color: #7067A2 !important;
-    border-color: none !important;
+    border: none !important;
 }

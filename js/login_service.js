@@ -65,9 +65,6 @@ $(document).ready(function() {
         var username = $("#inputUsername").val();
         var password = $("#inputPassword").val()
 
-        console.log(password);
-        console.log(username);
-
         user = new User(username, password);
         var check = false;
         user.login().then(() => {
@@ -79,7 +76,7 @@ $(document).ready(function() {
                 $('#inputPassword').removeClass("wrong");
                 $('#wrongCred').addClass("visually-hidden");
                 localStorage.setItem("username", username);
-                window.location.href = "plan.html";
+                window.location.href = "dashboard.html";
                 e.preventDefault();
             }
 

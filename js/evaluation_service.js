@@ -22,7 +22,7 @@ async function createCheckBox(containerId) {
 
     await getEvaluationById(1).then((resp) => {
         evaluation = resp.data;
-        //console.log(evaluation);
+
     });
 
     await setTimeout(function() {
@@ -168,7 +168,6 @@ class answerRadioFields {
 
     _checkAnswer(resp) {
         const selected = resp.path[1].querySelector("input:checked");
-        console.log(resp);
 
         if (selected) {
             // get question
@@ -187,12 +186,11 @@ class answerRadioFields {
             if (question.correct_answer == selected.attributes.answerid.value) {
                 resp.path[4].style.backgroundColor = "rgb(144,238,144)";
 
-                console.log("Correct answer");
             } else if (question.correct_answer == "True" | question.correct_answer == "true") {
                 resp.path[4].style.backgroundColor = "rgb(211,211,211)";
             } else {
                 resp.path[4].style.backgroundColor = "rgb(250,128,114)";
-                console.log("Wrong answer");
+
             }
         } else {
             //TODO: Raise alert

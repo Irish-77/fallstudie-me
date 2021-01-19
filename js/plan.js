@@ -68,7 +68,6 @@ $(document).ready(function() {
 
             var today = new Date(new Date().toDateString()).getTime();
 
-            console.log(resp);
 
             for (i = 0; i < resp.length; i++) {
                 /** TEMP */
@@ -82,10 +81,20 @@ $(document).ready(function() {
                 var day_nr = date.toLocaleString('default', { day: '2-digit' });
                 var month_short = date.toLocaleString('default', { month: 'short' });
 
-                var eigenschaft = umlaute(resp[i].attribute);
+                var eigenschaft;
+                if (resp[i].stage == 0) {
+                    eigenschaft = umlaute(resp[i].attribute);
+                } else {
+                    eigenschaft = `Stage: ${resp[i].stage} - ${resp[i].attribute}`;
+                }
+
                 var task = umlaute(resp[i].task);
                 var dauer = umlaute(resp[i].duration);
                 var beschreibung = umlaute(resp[i].description);
+
+                if (day_short == "Di") {
+                    dauer += " &#x1F60F";
+                }
 
                 var step = `<div id="${current_id}" class="step"> <div id="beschriftung"> <h3>${day_short},<br>${day_nr}<br>${month_short}</h3> </div> <div class="v-stepper"> <div class="circle"></div> <div class="line"></div> </div> <div class="content" style="text-align: justify;"> <h3>${eigenschaft}</h3> <h5>${task}</h5> <p>&#127919 ${beschreibung}</p> <p>&#9200 ${dauer}</p> <div id="accordion_${current_id}"> </div> </div> </div>`;
                 $('#plan').append(step);
