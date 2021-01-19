@@ -18,19 +18,9 @@ feedList = [{
 ];
 
 
-
-
 $(document).ready(function() {
-    /*
-    Querbert
-    a1b2c3
-    a1b2c3
-    */
 
     document.title = "Hi " + localStorage.getItem('username');
-
-
-
 
     for (i = 0; i < 30; i++) {
 

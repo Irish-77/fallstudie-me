@@ -4,8 +4,7 @@ function getData() {
             'x_axis': 'Wochentag',
             'y_axis': 'Anzahl der Tasks',
         },
-        'data': [5, 13, 9, 6, 12, 10, 2,
-        ]
+        'data': [5, 13, 9, 6, 12, 10, 2, ]
     }
 }
 
@@ -72,6 +71,8 @@ async function drawChart() {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             title: {
                 display: true,
                 text: 'Erfüllte Tasks je Wochentag',

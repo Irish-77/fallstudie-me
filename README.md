@@ -1,11 +1,21 @@
 # fallstudie-me
 
 Nutzer zum Anmelden: 
-Username: Querbert
-Passwort: a1b2c3
+- Username: Querbert
+- Passwort: a1b2c3
+
+Seiten, für die man eingeloggt sein muss:
+- plan.html
+- evaluation.html
+- dashboard.html
 
 
-Index.html: Landingpage
+Kurze Beschreibung der Seiten:
+- Index: Landingpage
+- Login: Anmelden
+- Dashboard: Überblick-Seite, die der Nutzer erhält, wenn er sich anmeldet
+- Plan: Wochenplan mit Aufgaben
+- Evaluation: wöchentliche Selbsttests
 
-Wenn man sich anmeldet wird man auf den Weekly-Plan (plan.html) weitergeleitet. 
-Scrollt man dort runter und klickt auf den Teste Mich-Button öffnet sich die Evaluierungsseite.
+
+WICHTIG: Viele kleinere Features sind nicht sehr offensichtlich.

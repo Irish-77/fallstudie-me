@@ -45,6 +45,8 @@ async function drawChart() {
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             title: {
                 display: true,
                 text: 'Fortschritt Deiner Kurse',

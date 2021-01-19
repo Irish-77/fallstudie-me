@@ -1,11 +1,16 @@
 body {
     font-size: .875rem;
+    padding-bottom: 0 !important;
 }
 
 .feather {
     width: 16px;
     height: 16px;
     vertical-align: text-bottom;
+}
+
+.container-fluid {
+    padding-bottom: 0 !important;
 }
 
 
@@ -105,7 +110,7 @@ body {
 }
 
 .scrollClass {
-    height: 65vh;
+    height: 70vh;
     overflow-y: scroll;
 }
 
@@ -119,7 +124,7 @@ nav {
 }
 
 .list-group-item {
-    margin-top: 5%;
+    margin-top: 15px;
     border-radius: 5px;
     color: white;
     background-color: transparent;

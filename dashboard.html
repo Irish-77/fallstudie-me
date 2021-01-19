@@ -37,6 +37,12 @@
     </style>
 
     <link href="css/dashboard.css" rel="stylesheet">
+
+    <script>
+        if (localStorage.getItem('username') == null) {
+            window.location.href = "login.html";
+        }
+    </script>
 </head>
 
 <body class="bg-dark text-white">
@@ -129,50 +135,66 @@
 
 
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 order-sm-last order-md-first order-lg-first">
+
+                        <div class="col-lg-8 col-md-6 col-sm-12">
+                            <h1 class="h3 text-center">Statistiken</h1>
+                            <div class="row " style="height: 100%; margin-bottom: 30px;">
+                                <div class="col-lg-6 col-md-6 col-sm-12 " style="">
+
+                                    <div style="height: 350px; width: auto;">
+                                        <canvas id="chart-0" class="chartjs-render-monitor "></canvas>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 " style=" ">
+
+                                    <div style="height: 350px; width: auto;">
+                                        <canvas id="chart-1" class="chartjs-render-monitor "></canvas>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 " style=" ">
+
+                                    <div style="height: 350px; width: auto;">
+                                        <canvas id="chart-2" class="chartjs-render-monitor "></canvas>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-12 " style=" ">
+
+                                    <div style="height: 350px; width: auto;">
+                                        <canvas id="chart-3" class="chartjs-render-monitor "></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <h1 class="h3 text-center">Feed</h1>
                             <div class="list-group scrollClass" id="feedList">
 
                             </div>
                         </div>
-
-
-
-                        <div class="col-lg-8 col-md-6 col-sm-12 order-sm-first order-md-last order-lg-last">
-                            <div class="row ">
-                                <div class="col-lg-6 col-md-6 col-sm-12 " style="">
-                                    <div class="card bg-dark" style="width: 18rem;">
-                                        <div class="card-body">
-                                            <canvas id="chart-0" class="chartjs-render-monitor" width="auto" height="300"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-sm-12 " style="">
-                                    <div class="card bg-dark" style="width: 18rem;">
-                                        <div class="card-body">
-                                            <canvas id="chart-1" class="chartjs-render-monitor" width="auto" height="300"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
-
             </main>
         </div>
     </div>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="js/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-    <script src="js/dashboard.js"></script>
-    <script type="text/javascript" src="js/last_week_task_chart.js"></script>
-    <script type="text/javascript" src="js/progress_course.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW " crossorigin="anonymous "></script>
+    <script src="js/jquery.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js " integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js " integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha " crossorigin="anonymous "></script>
+    <script src="js/dashboard.js "></script>
+    <script type="text/javascript " src="js/last_week_task_chart.js "></script>
+    <script type="text/javascript " src="js/progress_course.js "></script>
+    <script type="text/javascript " src="js/answer_chart.js "></script>
+    <script type="text/javascript " src="js/course_progress_chart.js "></script>
 </body>
 
 </html>
